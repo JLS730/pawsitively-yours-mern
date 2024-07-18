@@ -1,0 +1,141 @@
+.settings-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em 0;
+  background-color: #f7f7f7;
+}
+.settings-page .settings-about-you-container {
+  width: 80%;
+  padding: 2.5em 0.5em;
+}
+.settings-page .settings-about-you-container .about-you-title-text {
+  font-family: sans-serif;
+  padding-bottom: 0.5em;
+}
+.settings-page .settings-about-you-container .about-you-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 3em;
+  gap: 3em;
+  background-color: azure;
+  width: 100%;
+}
+.settings-page .settings-about-you-container .about-you-container div {
+  width: 20em;
+}
+.settings-page .settings-about-you-container .about-you-container div p {
+  font-family: sans-serif;
+  padding-bottom: 0.5em;
+}
+.settings-page .settings-about-you-container .about-you-container div input {
+  font-family: sans-serif;
+  padding: 0.3em;
+  width: 100%;
+  border-radius: 0.3em;
+  border: 1px solid black;
+}
+.settings-page .settings-availability-container {
+  width: 80%;
+  padding: 2.5em 0.5em;
+}
+.settings-page .settings-availability-container .contact-availability-title-text {
+  font-family: sans-serif;
+  padding-bottom: 0.5em;
+}
+.settings-page .settings-availability-container .contact-time-container {
+  padding: 2em;
+  width: 100%;
+  font-family: sans-serif;
+}
+.settings-page .settings-availability-container .contact-time-container .contact-time-text {
+  padding-bottom: 0.4em;
+}
+.settings-page .settings-availability-container .contact-time-container .contact-time-instruction-text {
+  padding-bottom: 1em;
+}
+.settings-page .settings-availability-container .contact-time-container .times-container {
+  padding-left: 0.5em;
+}
+.settings-page .settings-availability-container .contact-time-container .times-container div {
+  padding-top: 0.5em;
+}
+.settings-page .settings-availability-container .contact-time-container .times-container div label {
+  padding-left: 0.7em;
+}
+.settings-page .settings-availability-container .contact-day-container {
+  padding: 2em;
+  width: 100%;
+  font-family: sans-serif;
+}
+.settings-page .settings-availability-container .contact-day-container .contact-day-text {
+  padding-bottom: 0.4em;
+}
+.settings-page .settings-availability-container .contact-day-container .contact-day-instruction-text {
+  padding-bottom: 1em;
+}
+.settings-page .settings-availability-container .contact-day-container .days-container {
+  padding-left: 0.5em;
+}
+.settings-page .settings-availability-container .contact-day-container .days-container div {
+  padding-top: 0.5em;
+}
+.settings-page .settings-availability-container .contact-day-container .days-container div label {
+  padding-left: 0.7em;
+}
+.settings-page .settings-address-container {
+  width: 80%;
+}
+.settings-page .settings-address-container .address-title-text {
+  font-family: sans-serif;
+  padding-bottom: 0.5em;
+}
+.settings-page .settings-address-container .address-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.settings-page .settings-address-container .address-container div {
+  width: 100%;
+}
+.settings-page .settings-address-container .address-container div p {
+  font-family: sans-serif;
+  padding: 1.7em 0 0.6em 0;
+}
+.settings-page .settings-address-container .address-container div input {
+  font-family: sans-serif;
+  padding: 0.3em;
+  width: 100%;
+  border-radius: 0.3em;
+  border: 1px solid black;
+}
+.settings-page button {
+  background-color: white;
+  width: 8.5em;
+  border: 1px solid black;
+  border-radius: 0.3em;
+  padding: 0.2em;
+  font-family: sans-serif;
+  transition: 0.1s all linear;
+  margin: 0.6em 0;
+}
+.settings-page button:hover {
+  background-color: #007a92;
+  color: white;
+  border: 1px solid #007a92;
+}
+
+@media (max-width: 360px) {
+  .favorite-pet-page {
+    gap: 1em 0.5em !important;
+  }
+  .adoption-photo-containers {
+    height: 14em !important;
+    width: 9.2em !important;
+  }
+}/*# sourceMappingURL=account.css.map */

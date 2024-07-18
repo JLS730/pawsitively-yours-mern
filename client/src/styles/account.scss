@@ -1,0 +1,172 @@
+.settings-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em 0;
+    background-color: #f7f7f7;
+
+    .settings-about-you-container {
+        width: 80%;
+        padding: 2.5em .5em;
+
+        .about-you-title-text {
+            font-family: sans-serif;
+            padding-bottom: .5em;
+        }
+
+        .about-you-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: 1px solid black;
+            padding: 3em;
+            gap: 3em;
+            background-color: azure;
+            width: 100%;
+
+            div {
+                width: 20em;
+                
+                p {
+                    font-family: sans-serif;
+                    padding-bottom: .5em;
+                }
+
+                input {
+                    font-family: sans-serif;
+                    padding: .3em;
+                    width: 100%;
+                    border-radius: .3em;
+                    border: 1px solid black;
+                }
+            }
+        }
+    }
+
+    .settings-availability-container {
+        width: 80%;
+        padding: 2.5em .5em;
+
+        .contact-availability-title-text {
+            font-family: sans-serif;
+            padding-bottom: .5em;
+
+        }
+        
+        .contact-time-container {
+            padding: 2em;
+            width: 100%;
+            font-family: sans-serif;
+
+            .contact-time-text {
+                padding-bottom: .4em;
+            }
+
+            .contact-time-instruction-text {
+                padding-bottom: 1em;
+            }
+
+            .times-container {
+                padding-left: .5em;
+
+                div {
+                    padding-top: .5em;
+
+                    label {
+                        padding-left: .7em;
+                    }
+                }
+            }
+        }
+        
+        .contact-day-container {
+            padding: 2em;
+            width: 100%;
+            font-family: sans-serif;
+
+            .contact-day-text {
+                padding-bottom: .4em;
+            }
+
+            .contact-day-instruction-text {
+                padding-bottom: 1em;
+            }
+
+            .days-container {
+                padding-left: .5em;
+
+                div {
+                    padding-top: .5em;
+
+                    label {
+                        padding-left: .7em;
+                    }
+                }
+            }
+        }
+    }
+
+    .settings-address-container {
+        width: 80%;
+        // padding: 2.5em .5em;
+
+        .address-title-text {
+            font-family: sans-serif;
+            padding-bottom: .5em;
+        }
+
+        .address-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+
+            div {
+                width: 100%;
+                
+                p {
+                    font-family: sans-serif;
+                    padding: 1.7em 0 .6em 0;
+                }
+
+                input {
+                    font-family: sans-serif;
+                    padding: .3em;
+                    width: 100%;
+                    border-radius: .3em;
+                    border: 1px solid black;
+                }
+            }
+        }
+    }
+
+    button {
+        background-color: white;
+        width: 8.5em;
+        border: 1px solid black;
+        border-radius: .3em;
+        padding: .2em;
+        font-family: sans-serif;
+        transition: .1s all linear;
+        margin: .6em 0;
+    }
+
+    button:hover {
+        background-color: #007a92;
+        color: white;
+        border: 1px solid #007a92;
+    }
+}
+
+@media (max-width: 360px) {
+    .favorite-pet-page {
+        gap: 1em .5em !important;
+    }
+
+    .adoption-photo-containers {
+        height: 14em !important;
+        width:9.2em !important;
+    }
+}

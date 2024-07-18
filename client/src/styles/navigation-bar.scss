@@ -1,0 +1,122 @@
+.navigation-bar-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // height: 40px;
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+    z-index: 1;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: sticky;
+    top: 0;
+
+    .navigation-bar-left {
+        width: 200px;
+        background-color: #f7f7f7;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        
+
+        // .navigation-logo-temp {
+        //     width: 30px;
+        //     height: 30px;
+        //     border-radius: 50%;
+        //     background-color: rgb(117, 14, 14);
+        //     // margin-left: 2em;
+        // }
+
+        .site-logo {
+            height: 200px;
+        }
+    }
+
+    .navigation-bar-right {
+        width: calc(100% - 200px);
+        height: 150px;
+        // background-color: pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+
+        .navigation-contact-container {
+            height: 80px;
+            width: 860px;
+            // background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: flex-end;
+
+            .contact-containers {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 1em;
+
+                i {
+                    font-size: 2em;
+                }
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    margin-left: 1em;
+                    font-family: sans-serif;
+                    border-right: 2px solid #eff1f0;
+                    padding-right: 2em;
+
+                    span {
+                        font-size: 1.3em;
+                    }
+
+                    span:first-child {
+                        font-weight: bold;
+                    }
+                }
+
+                .loacation-info-container {
+                    border-right: none;
+                }
+            }
+        }
+
+        .navigation-links-container {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            // align-items: flex-end;
+            border-top: 1px solid #eff1f0;
+        }
+
+        .navigation-links {
+            display: flex;
+            // align-self: flex-end;
+            justify-content: space-between;
+            align-items: center;
+            width: 600px;
+            height: 100%;
+            margin-right: 3.2em;
+
+            li {
+                list-style: none;
+                font-size: 1.4em;
+                font-family: "Indie Flower", cursive;
+                font-weight: bold;
+
+                a {
+                    text-decoration: none;
+                    letter-spacing: .1em;
+                    color: #22546a;
+                }
+            }
+        }
+    }
+}

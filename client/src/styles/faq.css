@@ -1,0 +1,28 @@
+.faq-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+.faq-page .faq-content {
+  margin: 0 auto;
+  width: 1200px;
+  max-width: 100%;
+  font-family: sans-serif;
+  padding: 2em;
+}
+.faq-page .faq-content h1 {
+  font-family: "Indie Flower", cursive;
+  padding: 2em 0;
+}
+.faq-page .faq-content .faq-item {
+  padding: 1em 0;
+}
+.faq-page .faq-content .faq-item .question {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+.faq-page .faq-content .faq-item .answer {
+  padding: 0.5em 0;
+  font-size: 1.2em;
+  text-align: justify;
+}/*# sourceMappingURL=faq.css.map */
