@@ -116,12 +116,13 @@ const Favorites = () => {
     console.log('function running')
   }
   
-  function handleFavoritesDelete(id) {
+  function handleFavoritesDelete(userId, id) {
     axios({
       method: 'post',
       url: '/api/favorites/delete',
       headers: {},
       data: {
+        user: userId,
         animal: id
       }
     }).then(response => {
@@ -166,7 +167,7 @@ const Favorites = () => {
               <div className={`adoption-photo-container-${x} adoption-photo-containers`}>
                 <div className="adoption-delete-button-container">
                   <i class="fa-sharp fa-solid fa-circle-xmark fa-2xl" onClick={() => {
-                    handleFavoritesDelete(dog.id)
+                    handleFavoritesDelete(userId, dog.id)
                     setTimeout(() => {
 
                       navigate(0)
@@ -185,7 +186,7 @@ const Favorites = () => {
             )
           })}
         </div>
-        <button className="test" onClick={() => console.log(favoriteList)}>test</button>
+        <button className="test" onClick={() => console.log(userId)}>test</button>
       </div>
     </div>
   )

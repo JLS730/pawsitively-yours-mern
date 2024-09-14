@@ -59,7 +59,7 @@ const Register = () => {
                     email: emailRef.current.value,
                     username: usernameRef.current.value,
                     password: passwordRef.current.value,
-                    id: user.uid, // This is the body part
+                    id: user.uid.toLocaleLowerCase(), // This is the body part
                 }
             }).then(response => {
                 if(user) {

@@ -7,21 +7,23 @@ dotenv.config({path: '../.env'})
 
 const app = express()
 
+// app.use(express.static('build'))
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.json())
 app.use(express.text())
 
 const adoptionPool = myspl.createPool({
-    host: '127.0.0.1',
-    user: 'root',
+    host: 'adoption-base.cl6agyw0ww8k.us-east-2.rds.amazonaws.com',
+    user: 'admin',
     password: process.env.SERVER_PASSWORD,
     database: 'adoption'
 }).promise()
 
 const userFavoritesPool = myspl.createPool({
-    host: '127.0.0.1',
-    user: 'root',
+    host: 'adoption-base.cl6agyw0ww8k.us-east-2.rds.amazonaws.com',
+    user: 'admin',
     password: process.env.SERVER_PASSWORD,
     database: 'adoption_user_favorites'
 }).promise()
@@ -44,15 +46,22 @@ async function createUserFavoriteTable(id) {
     `,)
 }
 
+// async function createUserFavorites(user, dogID) {
+//     await userFavoritesPool.query(`
+//         INSERT IGNORE INTO adoption_user_favorites.${user} (animal_id)
+//         VALUES (?)    
+//     `, [dogID])
+// }
+
 async function createUserFavorites(user, dogID) {
     await userFavoritesPool.query(`
-        INSERT IGNORE INTO ${user} (animal_id)
+        INSERT IGNORE INTO adoption_user_favorites.${user} (animal_id)
         VALUES (?)    
     `, [dogID])
 }
 
-async function deleteUserFavorites(dogID) {
-    await userFavoritesPool.query(`DELETE FROM adoption_user_favorites.dvttzi9erfqtooo3y8gndn6j0ls2 WHERE (animal_id = ${dogID})`)
+async function deleteUserFavorites(user, dogID) {
+    await userFavoritesPool.query(`DELETE FROM adoption_user_favorites.${user} WHERE (animal_id = ${dogID})`)
 }
 
 async function getUserFavoritesList(user) {
@@ -79,16 +88,16 @@ app.post('/favorites-list', async function (req, res) {
     const favoriteListResult = await getUserFavoritesList(user)
 
     res.json(favoriteListResult[0])
-    // console.log(favResult)
+    // console.log(user)
 })
 
 app.post('/api/favorites/delete', (req, res) => {
-    const { animal } = req.body
+    const { user, animal } = req.body
 
     console.log(animal)
-    deleteUserFavorites(animal)
+    deleteUserFavorites(user, animal)
 
-    // res.status(201).json(adoptionList)
+    res.status(201).json(adoptionList)
 })
 
 app.post('/api/users', (req, res) => {
@@ -98,7 +107,7 @@ app.post('/api/users', (req, res) => {
     createUserFavoriteTable(id)
 
     console.log(username, email, password, id)
-    return res.send(200)
+    return res.sendStatus(200)
 })
 
 app.post('/api/favorites', (req, res) => {
@@ -107,7 +116,7 @@ app.post('/api/favorites', (req, res) => {
     createUserFavorites(user, dog)
 
     console.log(dog, user)
-    return res.send(200)
+    return res.sendStatus(200)
 })
 
 app.listen(5000, () => {
